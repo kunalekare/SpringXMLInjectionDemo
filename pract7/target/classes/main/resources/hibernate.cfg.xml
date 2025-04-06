@@ -1,0 +1,18 @@
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hospital_db</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">pass123</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+
+        <!-- Entity Mappings -->
+        <mapping class="com.hospital.entity.Doctor"/>
+        <mapping class="com.hospital.entity.Patient"/>
+        <mapping class="com.hospital.entity.Appointment"/>
+        <mapping class="com.hospital.entity.Nurse"/>
+
+    </session-factory>
+</hibernate-configuration>
